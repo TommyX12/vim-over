@@ -17,13 +17,14 @@ let s:hl_mark_center = ''
 let s:hl_mark_end   = ''
 
 
-let g:over#command_line#substitute#highlight_pattern = get(g:, "over#command_line#substitute#highlight_pattern", "Search")
+let g:over#command_line#substitute#highlight_pattern = get(g:, "over#command_line#substitute#highlight_pattern", "DiffDelete")
 
-if hlexists("Error")
-	let g:over#command_line#substitute#highlight_string = get(g:, "over#command_line#substitute#highlight_string", "Error")
-else
-	let g:over#command_line#substitute#highlight_string = get(g:, "over#command_line#substitute#highlight_string", "ErrorMsg")
-endif
+let g:over#command_line#substitute#highlight_string = get(g:, "over#command_line#substitute#highlight_string", "DiffAdd")
+" if hlexists("Error")
+	" let g:over#command_line#substitute#highlight_string = get(g:, "over#command_line#substitute#highlight_string", "Error")
+" else
+	" let g:over#command_line#substitute#highlight_string = get(g:, "over#command_line#substitute#highlight_string", "ErrorMsg")
+" endif
 
 
 function! s:init()
